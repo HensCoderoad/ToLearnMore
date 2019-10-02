@@ -19,7 +19,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 /**
- * 基于微信原理JAVA实现线程安全Token验证-JWT，如果不清楚JWT TOKEN的原理机制，我的上一篇JWT-TOKEN博客有详细介绍，这篇博文主要是具体实现。
+ * 基于微信原理JAVA实现线程安全Token验证-JWT
  * Token主要是用于以作客户端进行请求的一个令牌，当第一次登录后，服务器生成一个Token便将此Token返回给客户端，以后客户端只需带上这个Token前来请求数据即可，无需再次带上密匙。
  * @author : Hens
  * @date : 2019/9/29 18:03
