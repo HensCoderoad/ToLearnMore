@@ -5,12 +5,19 @@ import java.util.*;
 /**
  * 敏感词处理工具 - DFA算法实现
  * @author Hens
+ * 方法：
+ * 初始化敏感词库sensitiveWord
+ * 查看是否有关键词SensitiveWordUtil.contains(str,SensitiveWordUtil.MinMatchType);
+ * 获取语句中的敏感词SensitiveWordUtil.getSensitiveWord(str,SensitiveWordUtil.MinMatchType);
+ * 替换敏感词SensitiveWordUtil.replaceSensitiveWord(str, "*");SensitiveWordUtil.replaceSensitiveWord(str, "[敏感词]");
  */
 public class SensitiveWordUtil {
     /**
      * 敏感词匹配规则
      */
+    // 最小匹配规则，如敏感词库[中国，中国人]，语句：我是中国人，过滤后：我是**人
     public static final int MinMatchType = 1;
+    // 最大匹配规则，如敏感词库[中国，中国人]，语句：我是中国人，过滤后：我是***
     public static final int MaxMatchType = 2;
     /**
      * 敏感词集合
